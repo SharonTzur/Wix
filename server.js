@@ -16,18 +16,25 @@ mongoose.connection.once('connected', function() {
     console.log("Database connected successfully")
 });
 
-console.log(db);
-
-
 var TodoSchema = new mongoose.Schema({
     name: String,
     completed: Boolean,
     note: String,
-    updated_at: { type: Date, default: Date.now },
+    updated_at: { type: Date, default: Date.now }
 });
 
  var Todo = mongoose.model('Todo', TodoSchema);
 
+
+app.get('/todos', function (req, res, next) {
+   
+    Todo.find(function (err, todos) {
+        if (err) return console.error(err);
+        res.json(todos)
+    });
+
+});
+/*
 
 var todo = new Todo({name: 'Master NodeJS', completed: false, note: 'Getting there...'});
 
@@ -38,11 +45,8 @@ var todo = new Todo({name: 'Master NodeJS', completed: false, note: 'Getting the
         console.log(todo);
 });
 
+*/
 
-Todo.find(function (err, todos) {
-    if (err) return console.error(err);
-    console.log(todos)
-});
 
 
 
