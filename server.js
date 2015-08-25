@@ -9,7 +9,7 @@ console.log("Hello World");
 var mongoose = require('mongoose');
 
 //connecting local mongodb database named test
-var db = mongoose.connect('mongodb://127.0.0.1:27017/test');
+var db = mongoose.connect('mongodb://<dbuser>:<dbpassword>@http://ec2-52-26-100-183.us-west-2.compute.amazonaws.com:61731/test');
 
 //testing connectivity
 mongoose.connection.once('connected', function() {
