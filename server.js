@@ -1,4 +1,3 @@
-/*
 var express = require('express');
 
 var app = express();
@@ -14,8 +13,7 @@ var db = mongoose.connect('mongodb://127.0.0.1:27017/test');
 
 //testing connectivity
 mongoose.connection.once('connected', function() {
-    console.log("Database connected successfully");
-    
+    console.log("Database connected successfully")
 });
 
 
@@ -25,28 +23,24 @@ app.listen(8080, function() {
 
 
 
-*/
 
-
-var express = require('express');
-var app = express();
-
-app.get('/', function (req, res) {
-    res.send('Hello World!');
-});
-
-var server = app.listen(8080, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-
-    console.log('Example app listening at http://%s:%s', host, port);
-});
 
 /*
+ var express = require('express');
+ var app = express();
+ app.get('/', function (req, res) {
+ res.send('Hello World!');
+ });
+ var server = app.listen(8080, function () {
+ var host = server.address().address;
+ var port = server.address().port;
+ console.log('Example app listening at http://%s:%s', host, port);
+ });
+ */
 
-require("http").createServer(function(request, response){
-    response.writeHeader(200, {"Content-Type": "text/plain"});
-    response.write("Hello World!");
-    response.end();
-}).listen(8080);
-*/
+/*
+ require("http").createServer(function(request, response){
+ response.writeHeader(200, {"Content-Type": "text/plain"});
+ response.write("Hello World!");
+ response.end();
+ }).listen(8080);*/
