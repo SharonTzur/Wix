@@ -16,6 +16,7 @@ console.log("Hello World 2");
 
 */
 
+/*
 
 var express = require('express');
 var app = express();
@@ -29,4 +30,11 @@ var server = app.listen(80, function () {
     var port = server.address().port;
 
     console.log('Example app listening at http://%s:%s', host, port);
-});
+});*/
+
+
+require("http").createServer(function(request, response){
+    response.writeHeader(200, {"Content-Type": "text/plain"});
+    response.write("Hello World!");
+    response.end();
+}).listen(8080);
