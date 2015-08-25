@@ -15,6 +15,7 @@ var db = mongoose.connect('mongodb://sharontzur:sharontzur@ds055862.mongolab.com
 mongoose.connection.once('connected', function() {
     console.log("Database connected successfully")
 });
+
 console.log(db);
 
 
