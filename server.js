@@ -14,8 +14,8 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
 
-var contacts = db.Contacts.find();
-    console.log(contacts);
+//var contacts = db.Contacts.find();
+    console.log(db);
 
 
 });
