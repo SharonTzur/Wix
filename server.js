@@ -18,7 +18,7 @@ mongoose.connection.once('connected', function() {
 });*/
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
-var url = 'mongodb://http://52.26.100.183:8080/test';
+var url = 'mongodb://http://ec2-52-26-100-183.us-west-2.compute.amazonaws.com/test';
 
 MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);
