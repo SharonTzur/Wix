@@ -16,8 +16,10 @@ mongoose.connection.once('connected', function() {
     console.log("Database connected successfully");
 
 });*/
-
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
 var url = 'mongodb://http://52.26.100.183:8080/test';
+
 MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);
     console.log("Connected correctly to server.");
