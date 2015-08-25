@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 
 //connecting local mongodb database named test
 var db = mongoose.connect('mongodb://sharontzur:sharontzur@ds055862.mongolab.com:55862/my-db');
-console.log(db.db);
+console.log(db.connections.db);
 
 //testing connectivity
 mongoose.connection.once('connected', function() {
