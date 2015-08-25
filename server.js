@@ -6,25 +6,18 @@ app.use(express.static(__dirname + '/public'));
 
 console.log("Hello World");
 
-/*var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 //connecting local mongodb database named test
-var db = mongoose.connect('mongodb://127.0.0.1:27017/test');
+var uri = 'mongodb://user:pass@http://52.26.100.183:8080/test';
+var db = mongoose.connect(uri);
 
 //testing connectivity
 mongoose.connection.once('connected', function() {
     console.log("Database connected successfully");
 
-});*/
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
-var url = 'mongodb://http://ec2-52-26-100-183.us-west-2.compute.amazonaws.com/test';
-
-MongoClient.connect(url, function(err, db) {
-    assert.equal(null, err);
-    console.log("Connected correctly to server.");
-    db.close();
 });
+
 
 app.listen(8080, function() {
     console.log('ready to go!');
