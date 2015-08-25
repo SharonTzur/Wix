@@ -33,6 +33,14 @@ app.get('/todos', function (req, res, next) {
 
 app.post('/todos',function (req,res){
     var todo = new Todo({name: req.body.name, completed: req.body.completed, note: req.body.note});
+    todo.save(function(err){
+        if(err)
+            console.log(err);
+        else
+            console.log(todo);
+    });
+
+
 });
 /*
 
