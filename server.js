@@ -9,7 +9,7 @@ console.log("Hello World");
 var mongoose = require('mongoose');
 
 //connecting local mongodb database named test
-var uri = 'mongodb://user:pass@http://52.26.100.183:8080/test';
+var uri = 'mongodb://user:pass@localhost:port/database';
 var db = mongoose.connect(uri);
 
 //testing connectivity
