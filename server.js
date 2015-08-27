@@ -31,7 +31,7 @@ app.get('/todos', function (req, res, next) {
 
 });
 
-app.post('/todos',function (req,res){
+app.post('/todos', function (req,res){
     var todo = new Todo({name: req.body.name, completed: req.body.completed, note: req.body.note});
     todo.save(function(err){
         if(err)
@@ -58,7 +58,7 @@ var todo = new Todo({name: 'Master NodeJS', completed: false, note: 'Getting the
 
 
 
-app.listen(8080, function() {
+app.listen(80, function() {
     console.log('ready to go!');
 });
 
