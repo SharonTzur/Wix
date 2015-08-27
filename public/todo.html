@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form method="post" action="/todo">name<br/>
+<span class="form-title">Add a new To Do item!</span>
+<form method="post" action="/todo" id="todo-form">name:
     <input type="text" name="name">
-    <br/>completed<br/>
+    <br/>completed:
     <input type="checkbox" name="completed">
-    <br/>note<br/>
+    <br/>note:
     <input type="text" name="note">
     <br/>
 

@@ -28,11 +28,13 @@ var TodoSchema = new mongoose.Schema({
     updated_at: { type: Date, default: Date.now }
 });
  var Todo = mongoose.model('Todo', TodoSchema);
+
+
 app.get('/todos', function (req, res, next) {
 
     Todo.find(function (err, todos) {
         if (err) return console.error(err);
-        res.json(todos)
+        res.send(todos)
     });
 
 });
@@ -49,20 +51,6 @@ app.post('/todo', function (req,res){
 
 
 });
-/*
-
-var todo = new Todo({name: 'Master NodeJS', completed: false, note: 'Getting there...'});
-
- todo.save(function(err){
-    if(err)
-        console.log(err);
-    else
-        console.log(todo);
-});
-
-*/
-
-
 
 
 app.listen(80, function() {

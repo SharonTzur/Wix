@@ -1,0 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=News+Cycle:700);
+
+
+
+#todo-form {
+    margin:5%
+    width:50%;
+    border:2px solid black;
+    padding: 2%;
+    font-family: 'News Cycle', sans-serif;
+
+
+}
+
+.form-title {
+    margin:5%;
+    font-family: 'News Cycle', sans-serif;
+    font-size:2.5em;
+}
+
+
+#todo-form input[type="submit"]
+{
+    font-family: 'News Cycle', sans-serif;
+    margin: 4%;
+    font-size:2em;
+}
