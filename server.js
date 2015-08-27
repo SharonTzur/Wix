@@ -2,7 +2,8 @@
 var express = require('express');
 var bodyParser = require('body-parser')
 var app = express();
-app.use(express.static(__dirname + '/public'));
+var path = require('path');
+
 console.log("Hello World");
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -13,6 +14,11 @@ var db = mongoose.connect('mongodb://sharontzur:sharontzur@ds055862.mongolab.com
 mongoose.connection.once('connected', function() {
     console.log("Database connected successfully")
 });
+
+
+app.use(express.static(__dirname + '/public'));
+
+
 
 ///start
 var TodoSchema = new mongoose.Schema({
@@ -31,7 +37,8 @@ app.get('/todos', function (req, res, next) {
 
 });
 
-app.post('/todos', function (req,res){
+
+app.post('/todo', function (req,res){
     var todo = new Todo({name: req.body.name, completed: req.body.completed, note: req.body.note});
     todo.save(function(err){
         if(err)
