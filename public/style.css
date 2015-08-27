@@ -6,7 +6,7 @@ body {
     font-size:2em;
 }
 #todo-form {
-    margin:5%
+    margin:5%;
     width:50%;
     border:2px solid black;
     padding: 2%;
@@ -25,4 +25,5 @@ body {
 {
     font-family: 'News Cycle', sans-serif;
     margin: 4%;
+    font-size:1.5em;
 }
